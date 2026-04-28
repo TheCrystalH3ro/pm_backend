@@ -23,6 +23,9 @@ public class BoardColumn
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
+    private Double position;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id", nullable = false)
     @JsonIgnore
