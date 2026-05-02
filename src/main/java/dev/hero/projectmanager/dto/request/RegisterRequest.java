@@ -1,9 +1,11 @@
 package dev.hero.projectmanager.dto.request;
 
+import dev.hero.projectmanager.validation.PasswordMatch;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+@PasswordMatch
 public record RegisterRequest(
         @NotBlank(message = "Username cannot be empty")
         String username,
